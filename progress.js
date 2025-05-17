@@ -1,25 +1,30 @@
-// progress.js
-const MAX = 100;                          // 최대값
-const barEl   = document.getElementById("progressBar");
-const labelEl = document.getElementById("progressLabel");
+// progress.js (가독성 겸 오류 방지용 개선본)
+document.addEventListener("DOMContentLoaded", updateProgress);
 
 async function updateProgress() {
-  try {
-    // 예: /api/score → { "value": 73 }
-    const res   = await fetch("/api/score");
-    const { value } = await res.json();
-
-    // 안전하게 0 ~ MAX 사이로 고정
+    const barEl   = document.getElementById("progressBar");
+    const labelEl = document.getElementById("number");
+    const MAX = 100;
+  
+    /* 실제 API → let { value } = await (await fetch("/api/score")).json(); */
+    let value = 19;                       // 테스트용
+  
     const pct = Math.min(Math.max(value, 0), MAX) / MAX * 100;
-
-    // 길이 변경
+  
+    /* 길이 변경 */
     barEl.style.width = `${pct}%`;
-
-    // 텍스트-라벨(선택)
     labelEl.textContent = `${pct.toFixed(0)}%`;
-  } catch (err) {
-    console.error(err);
+  
+    /* ❶ 이전 단계(class) 제거 */
+    barEl.classList.remove("a", "b", "c", "d", "e");
+  
+    /* ❷ 새 단계(class) 부여 */
+    if      (pct < 20) barEl.classList.add("a");
+    else if (pct < 40) barEl.classList.add("b");
+    else if (pct < 60) barEl.classList.add("c");
+    else if (pct < 80) barEl.classList.add("d");
+    else               barEl.classList.add("e");
   }
-}
-
-document.addEventListener("DOMContentLoaded", updateProgress);
+  
+  document.addEventListener("DOMContentLoaded", updateProgress);
+  
