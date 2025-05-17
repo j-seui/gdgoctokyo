@@ -34,8 +34,6 @@
       <div class="review-box">
         <div class="sub-tabs">
             <h3 class="section-title">인식된 리뷰</h3>
-          <!-- <button class="sub selected">자동 번역</button>
-          <button class="sub">리뷰 직접 입력</button> -->
         </div>
 
         <p class="review-text">
@@ -55,41 +53,25 @@
       <h3 class="section-title2">  검사 결과</h3>
 
       <div class="progress-box">
-        <p class="progress-label"><b>스스로 작성한 리뷰예요</b></p>
+        <p class="progress-label"><b id="message"></b></p>
         <div class="progress-label">
-          <span>90%</span>
-          <div class="progress-bar"></div>
+          <span id="number"></span>
+          <script src="app.js"></script>
+          <div class="progress">
+            <div class="progress-bar" id="progress-bar"></div>
+          </div>
+          <script src="progress.js"></script>
         </div>
       </div>
 
       <p class="ai-summary">
         <strong>🤖AI 요약</strong><br/>
+        Sample Text:
         ‘내돈내산’ 언급 비율이 높고, ‘한찬 절대사절’을 본문에서 언급했어요.
         일상어의 사용 빈도가 높아 <span class="highlight">스스로 작성한 리뷰</span>로 판단했어요.
       </p>
     </section>
 
-    <!-- 더 정확한 리뷰 -->
-    <section>
-      <h3 class="section-title2">더 정확한 리뷰</h3>
-
-      <div class="filter-row">
-        <button class="filter active">같은 장소</button>
-        <button class="filter">근처 다른 식당</button>
-        <button class="filter">비슷한 분위기</button>
-      </div>
-
-      <div class="list-item">
-        <strong>1인 무한리필 명동회전훠궈 “옹가...”</strong>
-        <span class="accuracy">정확도 90%</span><br/>
-        앉은 자리에서 기차로봇이 1인용 냄비랑 육수를 싹-...
-      </div>
-      <div class="list-item">
-        <strong>1인 무한리필 명동회전훠궈 “옹가...”</strong>
-        <span class="accuracy">정확도 90%</span><br/>
-        앉은 자리에서 기차로봇이 1인용 냄비랑 육수를 싹-...
-      </div>
-    </section>
         <!-- Upload Button -->
         <div class="gradation"></div>
         <div class="button-wrapper">
