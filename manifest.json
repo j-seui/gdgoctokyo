@@ -1,10 +1,10 @@
 {
-    "name": "Show Selected Text",
-    "description": "Displays the most-recently highlighted text in the popup.",
+    "name": "SPOTTER",
+    "description": "Distinguishing Ad Reviews.",
     "version": "1.0.0",
     "manifest_version": 3,
   
-    "permissions": ["storage", "activeTab", "scripting"],
+    "permissions": ["storage", "activeTab", "scripting", "clipboardRead"],
     "host_permissions": ["<all_urls>"],
   
     "background": {
