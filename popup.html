@@ -1,3 +1,5 @@
+<!-- popup.html -->
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -43,7 +45,7 @@
 
         <div class="action-row">
           <!-- <button class="btn cancel">취소</button> -->
-          <button class="btn confirm">검사하기</button>
+          <button id="send" class="btn confirm">검사하기</button>
         </div>
       </div>
     </section>
@@ -51,7 +53,6 @@
     <!-- 검사 결과 -->
     <section>
       <h3 class="section-title2">  검사 결과</h3>
-
       <div class="progress-box">
         <p class="progress-label">스스로 작성한 리뷰예요</p>
         <div class="progress-label">
@@ -62,8 +63,8 @@
 
       <p class="ai-summary">
         <strong>AI 요약</strong><br/>
-        ‘내돈내산’ 언급 비율이 높고, ‘한찬 절대사절’을 본문에서 언급했어요.
-        일상어의 사용 빈도가 높아 <span class="highlight">스스로 작성한 리뷰</span>로 판단했어요.
+        <div id="result"></div>
+        <span class="highlight">스스로 작성한 리뷰</span>로 판단했어요.
       </p>
     </section>
 
