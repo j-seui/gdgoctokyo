@@ -1,6 +1,6 @@
 {
-    "name": "Show Selected Text",
-    "description": "Displays the most-recently highlighted text in the popup.",
+    "name": "SPOTTER",
+    "description": "Distinguishing Ad Reviews.",
     "version": "1.0.0",
     "manifest_version": 3,
   
